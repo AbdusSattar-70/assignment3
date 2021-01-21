@@ -19,9 +19,27 @@ function budgetCalculator(numberOfClock, numberOfPhone, numberOfLaptop) {
 }
 
 // third problem solving function.
-function hotelCost() {
-    
+function hotelCost(numberOfDay) {
+    var totalCost = 0; 
+    if (numberOfDay <= 10) {
+        totalCost = numberOfDay *100;
+    }
+    else if(numberOfDay <= 20) {
+        var firstOferRent = 10 * 100;
+        var extraDay = numberOfDay - 10;
+        var secondOferRent = extraDay *80;
+        totalCost = firstOferRent + secondOferRent;
+    }
+    else {
+        firstOferRent = 10 * 100;
+        secondOferRent = 10 *80;
+        extraDay = numberOfDay -20;
+        var thirdOferRent = extraDay * 50; 
+        totalCost = firstOferRent + secondOferRent + thirdOferRent;
+    }
+    return totalCost;
 }
+console.log(hotelCost(21));
 // fourth problem solving function.
 function megaFriend() {
     
