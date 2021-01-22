@@ -22,43 +22,6 @@ function budgetCalculator(numberOfClock, numberOfPhone, numberOfLaptop) {
         var laptopPrice = numberOfLaptop * 500;
         var totalPrice = clockPrice + phonePrice + laptopPrice;
     }
-    // if one/two parameter is input exactly 0,but one item is calculate.
-   else if (numberOfClock == 0 && numberOfPhone >= 1 && numberOfLaptop >= 1 ) {
-       clockPrice = numberOfClock * 50;
-       phonePrice = numberOfPhone * 100;
-       laptopPrice = numberOfLaptop * 500;
-       totalPrice = clockPrice + phonePrice + laptopPrice;
-    }
-   else if(numberOfClock == 0 && numberOfPhone == 0 && numberOfLaptop >= 1) {
-        clockPrice = numberOfClock * 50;
-        phonePrice = numberOfPhone * 100;
-        laptopPrice = numberOfLaptop * 500;
-        totalPrice = clockPrice + phonePrice + laptopPrice;
-   }
-   else if(numberOfClock == 0 && numberOfPhone == 0 && numberOfLaptop >= 0) {
-        clockPrice = numberOfClock * 50;
-        phonePrice = numberOfPhone * 100;
-        laptopPrice = numberOfLaptop * 500;
-        totalPrice = clockPrice + phonePrice + laptopPrice;
-    }
-    else if(numberOfClock >= 1 && numberOfPhone == 0 && numberOfLaptop >= 0) {
-        clockPrice = numberOfClock * 50;
-        phonePrice = numberOfPhone * 100;
-        laptopPrice = numberOfLaptop * 500;
-        totalPrice = clockPrice + phonePrice + laptopPrice;
-    }
-    else if(numberOfClock >= 1 && numberOfPhone >= 1 && numberOfLaptop >= 0) {
-        clockPrice = numberOfClock * 50;
-        phonePrice = numberOfPhone * 100;
-        laptopPrice = numberOfLaptop * 500;
-        totalPrice = clockPrice + phonePrice + laptopPrice;
-    }
-    else if(numberOfClock == 0 && numberOfPhone >= 1 && numberOfLaptop >= 0) {
-        clockPrice = numberOfClock * 50;
-        phonePrice = numberOfPhone * 100;
-        laptopPrice = numberOfLaptop * 500;
-        totalPrice = clockPrice + phonePrice + laptopPrice;
-    }
     else {
         console.log("an error- please input 3 parameter & parameter is greater than 0 and nonfraction");
     }
@@ -73,7 +36,7 @@ function hotelCost(numberOfDay) {
         totalCost = numberOfDay * 100;
     }
     else if(numberOfDay <= 20 && numberOfDay >= 1 ) {
-        // when first ten days over then per day rent = 80.
+        // when first ten days over & then per day rent = 80.
         var firstOferRent = 10 * 100;
         var extraDay = numberOfDay - 10;
         var secondOferRent = extraDay * 80;
@@ -81,7 +44,7 @@ function hotelCost(numberOfDay) {
         
     }
     else if(numberOfDay > 20) {
-        // when 20 days over then per day rent = 50.
+        // when 20 days over & then per day rent = 50.
         firstOferRent = 10 * 100;
         secondOferRent = 10 * 80;
         extraDay = numberOfDay - 20;
