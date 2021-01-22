@@ -1,7 +1,7 @@
+// https://github.com/sattarmondol/third-assignment
 
 // first problem solving function.
 function kilometerToMeter(getKilometer) {
-
     if(getKilometer != 0 && getKilometer > 0 ){
         // 1 kilometer = 1000 meter. user input (getKilometer) parsing to float
         var meter = +getKilometer * 1000; 
@@ -71,4 +71,3 @@ function megaFriend(friendName) {
     }
     return longestName;
 }
-console.log(megaFriend([0]));
