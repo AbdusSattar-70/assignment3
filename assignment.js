@@ -17,9 +17,9 @@ function kilometerToMeter(getKilometer) {
 function budgetCalculator(numberOfClock, numberOfPhone, numberOfLaptop) {
     // if parameter input is fractional/less than 1, this condition avoid it
     if (numberOfClock >= 1 && numberOfPhone >= 1 && numberOfLaptop >= 1 ) {
-        var clockPrice = numberOfClock * 50;
-        var phonePrice = numberOfPhone * 100;
-        var laptopPrice = numberOfLaptop * 500;
+        var clockPrice = Math.ceil(numberOfClock) * 50;
+        var phonePrice = Math.ceil(numberOfPhone) * 100;
+        var laptopPrice = Math.ceil(numberOfLaptop) * 500;
         var totalPrice = clockPrice + phonePrice + laptopPrice;
     }
     else {
@@ -32,7 +32,7 @@ function budgetCalculator(numberOfClock, numberOfPhone, numberOfLaptop) {
 function hotelCost(numberOfDay) {
     var totalCost = 0; 
     if (numberOfDay <= 10 && numberOfDay >= 1) {
-        // when per day rent =100.
+        // when per day rent =100.And stay minimum 1 day.
         totalCost = numberOfDay * 100;
     }
     else if(numberOfDay <= 20 && numberOfDay >= 1 ) {
@@ -58,6 +58,17 @@ function hotelCost(numberOfDay) {
 }
 
 // fourth problem solving function.
-function megaFriend() {
-    
+function megaFriend(friendName) {
+    var nameLength = 0;
+    for (var i = 0; i < friendName.length; i++) {
+        if (friendName[i].length > nameLength) {
+            var nameLength = friendName[i].length;
+            var longestName = friendName[i];
+        }
+        else{
+            console.log("an error");
+        }
+    }
+    return longestName;
 }
+console.log(megaFriend([0]));
